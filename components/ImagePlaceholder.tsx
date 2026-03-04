@@ -9,9 +9,11 @@ export default function ImagePlaceholder({
   src?: string;
   alt?: string;
 }) {
+  const aspectDefault = className.includes("aspect-") ? "" : "aspect-video";
+
   if (src) {
     return (
-      <div className={`relative rounded-lg overflow-hidden aspect-video ${className}`}>
+      <div className={`relative rounded-lg overflow-hidden ${aspectDefault} ${className}`}>
         <Image
           src={src}
           alt={alt}
@@ -25,7 +27,7 @@ export default function ImagePlaceholder({
 
   return (
     <div
-      className={`bg-cream rounded-lg flex items-center justify-center aspect-video ${className}`}
+      className={`bg-cream rounded-lg flex items-center justify-center ${aspectDefault} ${className}`}
     >
       <span className="text-terracotta text-xs font-medium uppercase tracking-widest font-body">
         Photo Coming Soon

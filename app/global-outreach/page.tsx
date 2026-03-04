@@ -22,7 +22,7 @@ export default function GlobalOutreachPage() {
       {COUNTRIES.map((country, i) => (
         <section
           key={country.name}
-          className={`px-6 ${
+          className={`px-6 py-12 md:py-20 ${
             i % 2 === 0 ? "bg-cream-light" : "bg-cream"
           }`}
         >
@@ -34,7 +34,7 @@ export default function GlobalOutreachPage() {
             {/* Image column */}
             <div className="md:w-1/2">
               {"image" in country && country.image ? (
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-md">
+                <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[4/3] shadow-md">
                   <Image
                     src={country.image}
                     alt={(country as { imageAlt?: string; name: string }).imageAlt ?? country.name}

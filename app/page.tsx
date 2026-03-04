@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream-light px-6 min-h-[90vh] flex items-center pt-16 md:pt-0">
+      <section className="bg-cream-light px-6 min-h-0 md:min-h-[90vh] flex items-center pt-8 pb-12 md:pt-0 md:pb-0">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid md:grid-cols-5 gap-12 items-center">
             <div className="md:col-span-3 text-center md:text-left">
@@ -77,20 +77,20 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in-up delay-300">
                 <Link
                   href="/focus-areas"
-                  className="bg-[#B07A50] text-white rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
+                  className="w-full sm:w-auto bg-[#B07A50] text-white rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body text-center"
                 >
                   Learn More About Our Projects
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-[#B07A50] text-[#B07A50] rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#B07A50] hover:text-white font-body"
+                  className="w-full sm:w-auto border-2 border-[#B07A50] text-[#B07A50] rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#B07A50] hover:text-white font-body text-center"
                 >
                   Partner With Us
                 </Link>
               </div>
             </div>
-            <div className="md:col-span-2">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg">
+            <div className="md:col-span-2 order-first md:order-last">
+              <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[4/3] shadow-lg">
                 <Image
                   src="/images/hero-community.png"
                   alt="Community members coming together — JJ Family Foundation"
@@ -130,7 +130,7 @@ export default function Home() {
                   key={card.title}
                   className={`bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta overflow-hidden animate-fade-in-up ${delayClass}`}
                 >
-                  <ImagePlaceholder className="aspect-[16/9] rounded-none" />
+                  <ImagePlaceholder className="aspect-[21/9] md:aspect-video rounded-none" />
                   <div className="p-7">
                     <card.icon className="w-8 h-8 text-terracotta mb-4" />
                     <h3 className="text-[26px] font-normal text-brown-dark font-display mb-3">
@@ -177,7 +177,7 @@ export default function Home() {
                   key={area.title}
                   className="bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta overflow-hidden"
                 >
-                  <ImagePlaceholder className="aspect-[16/9] rounded-none" />
+                  <ImagePlaceholder className="aspect-[21/9] md:aspect-video rounded-none" />
                   <div className="p-7">
                     <Icon className="w-8 h-8 text-terracotta mb-4" />
                     <h3 className="text-[26px] font-normal text-brown-dark font-display mb-2 leading-[1.25]">

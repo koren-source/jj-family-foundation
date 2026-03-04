@@ -85,8 +85,12 @@ section {
 
 @media (max-width: 768px) {
   section {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  p, li {
+    font-size: 15px;
   }
 
   h1 { font-size: 36px; }
