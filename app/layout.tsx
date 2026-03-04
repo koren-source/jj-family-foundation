@@ -1,23 +1,16 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville, DM_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const cormorant = Libre_Baskerville({
+const inter = Inter({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${dmSans.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`}>
         <Nav />
         <main>{children}</main>
         <Footer />
