@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --brown-dark: #5C3D2E;
+  --brown-mid: #8B5E3C;
+  --terracotta: #C9956C;
+  --cream: #F2E8D9;
+  --cream-light: #FAF5EE;
+  --divider: #D4B896;
+  --text-dark: #2C1A0E;
+  --white: #FFFFFF;
+}
+
+@theme inline {
+  --color-brown-dark: var(--brown-dark);
+  --color-brown-mid: var(--brown-mid);
+  --color-terracotta: var(--terracotta);
+  --color-cream: var(--cream);
+  --color-cream-light: var(--cream-light);
+  --color-divider: var(--divider);
+  --color-text-dark: var(--text-dark);
+  --font-display: var(--font-playfair);
+  --font-body: var(--font-lato);
+}
+
+body {
+  background: var(--cream-light);
+  color: var(--text-dark);
+  font-family: var(--font-body), sans-serif;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), serif;
+  line-height: 1.2;
+}
