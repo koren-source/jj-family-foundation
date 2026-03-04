@@ -55,7 +55,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="md:w-1/2">
-            <ImagePlaceholder />
+            <ImagePlaceholder src="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&q=80" alt="The Gardner family" />
           </div>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {familyMembers.map((member) => (
               <div key={member.name} className="text-center rounded-lg p-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-lg cursor-default">
-                <ImagePlaceholder className="mb-4 aspect-[3/4]" />
+                <ImagePlaceholder src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Jeff Gardner" className="mb-4 aspect-[3/4]" />
                 <h3 className="text-lg font-normal text-brown-dark font-display">
                   {member.name}
                 </h3>

@@ -34,7 +34,11 @@ const approachCards = [
 
 const focusAreaIcons = [DollarSign, GraduationCap, Heart, LifeBuoy, Shield];
 
-const countries = ["Brazil", "India", "Uganda"];
+const countries = [
+  { name: "Brazil", img: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=600&q=80", alt: "Brazil community" },
+  { name: "India", img: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=600&q=80", alt: "India families" },
+  { name: "Uganda", img: "https://images.unsplash.com/photo-1594708767771-a5e9d3012f4f?w=600&q=80", alt: "Uganda children" },
+];
 
 export default function Home() {
   return (
@@ -72,7 +76,7 @@ export default function Home() {
             </div>
           </div>
           <div className="md:w-2/5">
-            <ImagePlaceholder />
+            <ImagePlaceholder src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80" alt="Family community connection" />
           </div>
         </div>
       </section>
@@ -175,11 +179,11 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {countries.map((country) => (
-              <div key={country} className="text-center">
-                <ImagePlaceholder className="mb-4" />
+            {countries.map((c) => (
+              <div key={c.name} className="text-center">
+                <ImagePlaceholder src={c.img} alt={c.alt} className="mb-4" />
                 <h3 className="text-2xl font-normal text-brown-dark font-display">
-                  {country}
+                  {c.name}
                 </h3>
               </div>
             ))}

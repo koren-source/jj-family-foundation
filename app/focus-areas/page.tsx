@@ -32,7 +32,7 @@ export default function FocusAreasPage() {
             } gap-12 items-center`}
           >
             <div className="md:w-1/2">
-              <ImagePlaceholder />
+              <ImagePlaceholder src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Financial literacy and economic planning" />
             </div>
             <div className="md:w-1/2 max-w-[480px]">
               <SectionLabel text={area.number} />
