@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import SectionLabel from "@/components/SectionLabel";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -28,8 +27,8 @@ export default function AboutPage() {
 
       {/* Foundation Story */}
       <section className="px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-          <div className="md:w-1/2 max-w-[520px]">
+        <div className="max-w-4xl mx-auto">
+          <div className="max-w-2xl">
             <p className="text-[#3D2515] text-base font-light font-body leading-[1.8] mb-[1.4em]">
               JJ Family Foundation was founded by the Gardner family with a
               shared commitment to building generational self sufficiency. Led by
@@ -54,10 +53,7 @@ export default function AboutPage() {
               sufficient and resilient.
             </p>
           </div>
-          <div className="md:w-1/2">
-            <ImagePlaceholder src="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=800&q=80" alt="The Gardner family" />
-          </div>
-        </div>
+                  </div>
       </section>
 
       {/* Mission Blockquote */}
@@ -97,7 +93,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {familyMembers.map((member) => (
               <div key={member.name} className="text-center rounded-lg p-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-lg cursor-default">
-                <ImagePlaceholder src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Jeff Gardner" className="mb-4 aspect-[3/4]" />
                 <h3 className="text-lg font-normal text-brown-dark font-display">
                   {member.name}
                 </h3>

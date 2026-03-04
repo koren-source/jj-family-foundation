@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { COUNTRIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -30,10 +29,7 @@ export default function GlobalOutreachPage() {
               i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             } gap-12 items-center`}
           >
-            <div className="md:w-1/2">
-              <ImagePlaceholder src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b8?w=800&q=80" alt="Brazil community outreach" />
-            </div>
-            <div className="md:w-1/2">
+                        <div className="md:w-1/2">
               <h2 className="text-[44px] font-normal text-brown-dark font-display mb-2">
                 {country.name}
               </h2>

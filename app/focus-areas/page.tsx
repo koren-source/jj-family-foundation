@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import SectionLabel from "@/components/SectionLabel";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { FOCUS_AREAS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -31,10 +30,7 @@ export default function FocusAreasPage() {
               i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             } gap-12 items-center`}
           >
-            <div className="md:w-1/2">
-              <ImagePlaceholder src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Financial literacy and economic planning" />
-            </div>
-            <div className="md:w-1/2 max-w-[480px]">
+                        <div className="md:w-1/2 max-w-[480px]">
               <SectionLabel text={area.number} />
               <h2 className="text-[44px] md:text-[44px] font-light text-brown-dark font-display mt-3 mb-6">
                 {area.title}

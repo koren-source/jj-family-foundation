@@ -10,7 +10,6 @@ import {
   Shield,
 } from "lucide-react";
 import SectionLabel from "@/components/SectionLabel";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import CTAStrip from "@/components/CTAStrip";
 import { FOCUS_AREAS } from "@/lib/constants";
 
@@ -34,19 +33,15 @@ const approachCards = [
 
 const focusAreaIcons = [DollarSign, GraduationCap, Heart, LifeBuoy, Shield];
 
-const countries = [
-  { name: "Brazil", img: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=600&q=80", alt: "Brazil community" },
-  { name: "India", img: "https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=600&q=80", alt: "India families" },
-  { name: "Uganda", img: "https://images.unsplash.com/photo-1594708767771-a5e9d3012f4f?w=600&q=80", alt: "Uganda children" },
-];
+const countries = ["Brazil", "India", "Uganda"];
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
       <section className="bg-cream-light px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-3/5 text-center md:text-left">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl text-center md:text-left">
             <h1 className="text-brown-dark font-display font-light mb-4">
               Building Generational Self Sufficiency.
             </h1>
@@ -75,10 +70,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="md:w-2/5">
-            <ImagePlaceholder src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80" alt="Family community connection" />
-          </div>
-        </div>
+                  </div>
       </section>
 
       {/* Our Approach */}
@@ -179,11 +171,10 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {countries.map((c) => (
-              <div key={c.name} className="text-center">
-                <ImagePlaceholder src={c.img} alt={c.alt} className="mb-4" />
-                <h3 className="text-2xl font-normal text-brown-dark font-display">
-                  {c.name}
+            {countries.map((country) => (
+              <div key={country} className="text-center bg-cream rounded-xl py-12 px-6">
+                <h3 className="text-2xl font-semibold text-brown-dark font-display">
+                  {country}
                 </h3>
               </div>
             ))}
