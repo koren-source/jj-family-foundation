@@ -9,6 +9,7 @@ import {
   LifeBuoy,
   Shield,
 } from "lucide-react";
+import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 import CTAStrip from "@/components/CTAStrip";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
@@ -89,7 +90,16 @@ export default function Home() {
               </div>
             </div>
             <div className="md:col-span-2">
-              <ImagePlaceholder className="aspect-[4/3] rounded-2xl shadow-lg" />
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg">
+                <Image
+                  src="/images/hero-community.png"
+                  alt="Community members coming together — JJ Family Foundation"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
             </div>
           </div>
         </div>
