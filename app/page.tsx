@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import SectionLabel from "@/components/SectionLabel";
 import CTAStrip from "@/components/CTAStrip";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { FOCUS_AREAS } from "@/lib/constants";
 
 const approachCards = [
@@ -33,44 +34,65 @@ const approachCards = [
 
 const focusAreaIcons = [DollarSign, GraduationCap, Heart, LifeBuoy, Shield];
 
-const countries = ["Brazil", "India", "Uganda"];
+const countries = [
+  {
+    name: "Brazil",
+    description:
+      "Supporting family stability and recovery programs in local communities.",
+  },
+  {
+    name: "India",
+    description:
+      "Partnering with Rising Star Outreach to serve families living in leprosy colonies.",
+  },
+  {
+    name: "Uganda",
+    description:
+      "Investing in child-focused development through Children\u2019s HopeChest.",
+  },
+];
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream-light px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl text-center md:text-left">
-            <h1 className="text-brown-dark font-display font-light mb-4">
-              Building Generational Self Sufficiency.
-            </h1>
-            <p className="text-[22px] text-[#8B5E3C] font-display italic font-light mb-6">
-              Stronger families create stronger futures.
-            </p>
-            <p className="text-[#3D2515] text-base font-light max-w-2xl mb-8 font-body leading-[1.8]">
-              Through education, advocacy, and meaningful community connection,
-              we help families build stability, resilience, and opportunity that
-              extends beyond a single generation. We do not reinvent solutions.
-              We strengthen what already works and bring people together to
-              create lasting, sustainable impact.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Link
-                href="/focus-areas"
-                className="bg-[#B07A50] text-white rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
-              >
-                Learn More About Our Projects
-              </Link>
-              <Link
-                href="/contact"
-                className="border-2 border-[#B07A50] text-[#B07A50] rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#B07A50] hover:text-white font-body"
-              >
-                Partner With Us
-              </Link>
+      <section className="bg-cream-light px-6 min-h-[90vh] flex items-center pt-16 md:pt-0">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="grid md:grid-cols-5 gap-12 items-center">
+            <div className="md:col-span-3 text-center md:text-left">
+              <h1 className="text-brown-dark font-display font-light mb-4 animate-fade-in-up">
+                Building Generational Self Sufficiency.
+              </h1>
+              <p className="text-[22px] text-[#8B5E3C] font-display italic font-light mb-6 animate-fade-in-up delay-100">
+                Stronger families create stronger futures.
+              </p>
+              <p className="text-[#3D2515] text-base font-light max-w-2xl mb-8 font-body leading-[1.8] animate-fade-in-up delay-200">
+                Through education, advocacy, and meaningful community connection,
+                we help families build stability, resilience, and opportunity that
+                extends beyond a single generation. We do not reinvent solutions.
+                We strengthen what already works and bring people together to
+                create lasting, sustainable impact.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in-up delay-300">
+                <Link
+                  href="/focus-areas"
+                  className="bg-[#B07A50] text-white rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
+                >
+                  Learn More About Our Projects
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border-2 border-[#B07A50] text-[#B07A50] rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#B07A50] hover:text-white font-body"
+                >
+                  Partner With Us
+                </Link>
+              </div>
+            </div>
+            <div className="md:col-span-2">
+              <ImagePlaceholder className="aspect-[4/3] rounded-2xl shadow-lg" />
             </div>
           </div>
-                  </div>
+        </div>
       </section>
 
       {/* Our Approach */}
@@ -90,28 +112,40 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {approachCards.map((card) => (
-              <div
-                key={card.title}
-                className="bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta p-7"
-              >
-                <card.icon className="w-8 h-8 text-terracotta mb-4" />
-                <h3 className="text-[26px] font-normal text-brown-dark font-display mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-[#3D2515] text-[15px] font-light font-body leading-[1.75]">
-                  {card.body}
-                </p>
-              </div>
-            ))}
+            {approachCards.map((card, i) => {
+              const delayClass =
+                i === 0 ? "delay-100" : i === 1 ? "delay-200" : "delay-300";
+              return (
+                <div
+                  key={card.title}
+                  className={`bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta overflow-hidden animate-fade-in-up ${delayClass}`}
+                >
+                  <ImagePlaceholder className="aspect-[16/9] rounded-none" />
+                  <div className="p-7">
+                    <card.icon className="w-8 h-8 text-terracotta mb-4" />
+                    <h3 className="text-[26px] font-normal text-brown-dark font-display mb-3">
+                      {card.title}
+                    </h3>
+                    <p className="text-[#3D2515] text-[15px] font-light font-body leading-[1.75]">
+                      {card.body}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Pull Quote */}
-          <div className="py-[60px] border-t border-b border-[#D4B896]">
-            <p className="text-center text-[26px] text-brown-mid font-display italic font-light max-w-xl mx-auto leading-[1.5]">
-              When knowledge and connection come together, generational change
-              becomes possible.
-            </p>
+          <div className="py-20 border-t border-b border-[#D4B896]">
+            <div className="max-w-xl mx-auto text-center">
+              <span className="block text-7xl text-terracotta font-display leading-none -mb-4">
+                &ldquo;
+              </span>
+              <p className="text-[26px] text-brown-mid font-display italic font-light leading-[1.5]">
+                When knowledge and connection come together, generational change
+                becomes possible.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -131,21 +165,24 @@ export default function Home() {
               return (
                 <div
                   key={area.title}
-                  className="bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta p-7"
+                  className="bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta overflow-hidden"
                 >
-                  <Icon className="w-8 h-8 text-terracotta mb-4" />
-                  <h3 className="text-[26px] font-normal text-brown-dark font-display mb-2 leading-[1.25]">
-                    {area.title}
-                  </h3>
-                  <p className="text-[#3D2515] text-[14px] font-light font-body leading-[1.6] mb-3">
-                    {area.teaser}
-                  </p>
-                  <Link
-                    href="/focus-areas"
-                    className="group inline-flex items-center gap-1 text-[#8B5E3C] font-normal text-[13px] hover:underline underline-offset-4 font-body"
-                  >
-                    Learn More <span className="font-display italic inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
-                  </Link>
+                  <ImagePlaceholder className="aspect-[16/9] rounded-none" />
+                  <div className="p-7">
+                    <Icon className="w-8 h-8 text-terracotta mb-4" />
+                    <h3 className="text-[26px] font-normal text-brown-dark font-display mb-2 leading-[1.25]">
+                      {area.title}
+                    </h3>
+                    <p className="text-[#3D2515] text-[14px] font-light font-body leading-[1.6] mb-3">
+                      {area.teaser}
+                    </p>
+                    <Link
+                      href="/focus-areas"
+                      className="group inline-flex items-center gap-1 text-[#8B5E3C] font-normal text-[13px] hover:underline underline-offset-4 font-body"
+                    >
+                      Learn More <span className="font-display italic inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+                    </Link>
+                  </div>
                 </div>
               );
             })}
@@ -172,10 +209,19 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {countries.map((country) => (
-              <div key={country} className="text-center bg-cream rounded-xl py-12 px-6">
-                <h3 className="text-2xl font-semibold text-brown-dark font-display">
-                  {country}
-                </h3>
+              <div
+                key={country.name}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              >
+                <ImagePlaceholder className="aspect-video rounded-none" />
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold text-brown-dark font-display mb-2">
+                    {country.name}
+                  </h3>
+                  <p className="text-[#3D2515] text-[14px] font-light font-body leading-[1.6]">
+                    {country.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
