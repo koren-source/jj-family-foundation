@@ -13,7 +13,7 @@ export default function CTAStrip() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contact"
-            className="border-2 border-cream-light text-cream-light rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-cream-light hover:text-brown-dark font-body"
+            className="border-2 border-cream-light text-cream-light rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-cream-light hover:text-brown-dark font-body"
           >
             Partner With Us
           </Link>
@@ -21,7 +21,7 @@ export default function CTAStrip() {
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] font-body"
+            className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
           >
             Donate
           </a>

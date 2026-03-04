@@ -32,8 +32,10 @@ export default function Nav() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white transition-shadow ${
-        scrolled ? "shadow-sm" : ""
+      className={`sticky top-0 z-50 transition-all duration-200 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-[#D4B896]/30"
+          : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -67,7 +69,7 @@ export default function Nav() {
           })}
           <Link
             href="/contact"
-            className="bg-[#B07A50] text-white rounded px-5 py-2.5 text-xs font-medium uppercase tracking-[0.08em] transition-colors hover:bg-[#9A6A42] font-body"
+            className="bg-[#B07A50] text-white rounded px-5 py-2.5 text-xs font-medium uppercase tracking-[0.08em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
           >
             Partner With Us
           </Link>
@@ -123,7 +125,7 @@ export default function Nav() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="bg-[#B07A50] text-white rounded px-8 py-3 text-xs font-medium uppercase tracking-[0.08em] transition-colors hover:bg-[#9A6A42] font-body"
+              className="bg-[#B07A50] text-white rounded px-8 py-3 text-xs font-medium uppercase tracking-[0.08em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
             >
               Partner With Us
             </Link>

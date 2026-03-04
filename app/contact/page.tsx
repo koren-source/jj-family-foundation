@@ -56,7 +56,7 @@ export default function ContactPage() {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block border-2 border-cream-light text-cream-light rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-cream-light hover:text-brown-dark font-body"
+                className="inline-block border-2 border-cream-light text-cream-light rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-cream-light hover:text-brown-dark font-body"
               >
                 Donate Now
               </a>

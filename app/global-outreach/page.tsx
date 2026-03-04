@@ -47,9 +47,9 @@ export default function GlobalOutreachPage() {
                 href={country.link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#8B5E3C] font-normal text-[13px] hover:underline font-body"
+                className="group inline-flex items-center gap-1 text-[#8B5E3C] font-medium text-[13px] font-body hover:underline underline-offset-4"
               >
-                {country.link.label} <span className="font-display italic">&rarr;</span>
+                {country.link.label} <span className="font-display italic inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
               </a>
             </div>
           </div>

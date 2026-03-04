@@ -64,7 +64,7 @@ export default function ContactForm() {
           id="name"
           name="name"
           disabled={status === "loading"}
-          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
+          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark transition-all duration-200 focus:outline-none focus:border-terracotta focus:bg-[#FFFDF9] focus:ring-2 focus:ring-terracotta/15 disabled:opacity-50"
         />
         {errors.name && <p className="text-terracotta text-sm mt-1">{errors.name}</p>}
       </div>
@@ -77,7 +77,7 @@ export default function ContactForm() {
           id="email"
           name="email"
           disabled={status === "loading"}
-          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
+          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark transition-all duration-200 focus:outline-none focus:border-terracotta focus:bg-[#FFFDF9] focus:ring-2 focus:ring-terracotta/15 disabled:opacity-50"
         />
         {errors.email && <p className="text-terracotta text-sm mt-1">{errors.email}</p>}
       </div>
@@ -90,7 +90,7 @@ export default function ContactForm() {
           id="organization"
           name="organization"
           disabled={status === "loading"}
-          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
+          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark transition-all duration-200 focus:outline-none focus:border-terracotta focus:bg-[#FFFDF9] focus:ring-2 focus:ring-terracotta/15 disabled:opacity-50"
         />
       </div>
       <div>
@@ -102,7 +102,7 @@ export default function ContactForm() {
           name="message"
           rows={4}
           disabled={status === "loading"}
-          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50 min-h-[120px]"
+          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark transition-all duration-200 focus:outline-none focus:border-terracotta focus:bg-[#FFFDF9] focus:ring-2 focus:ring-terracotta/15 disabled:opacity-50 min-h-[120px]"
         />
       </div>
       {status === "error" && (
@@ -111,7 +111,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full sm:w-auto bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] disabled:opacity-50 font-body"
+        className="w-full sm:w-auto bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px disabled:opacity-50 font-body"
       >
         {status === "loading" ? (
           <span className="flex items-center justify-center gap-2">

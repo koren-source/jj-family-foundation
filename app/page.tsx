@@ -12,6 +12,7 @@ import {
 import SectionLabel from "@/components/SectionLabel";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import CTAStrip from "@/components/CTAStrip";
+import { FOCUS_AREAS } from "@/lib/constants";
 
 const approachCards = [
   {
@@ -31,13 +32,7 @@ const approachCards = [
   },
 ];
 
-const focusAreaPreviews = [
-  { icon: DollarSign, title: "Financial Literacy & Economic Self Sufficiency" },
-  { icon: GraduationCap, title: "Education & Entrepreneurship" },
-  { icon: Heart, title: "Family Stability & Faith-Based Support" },
-  { icon: LifeBuoy, title: "Addiction Recovery & Restoration" },
-  { icon: Shield, title: "Community Leadership Development" },
-];
+const focusAreaIcons = [DollarSign, GraduationCap, Heart, LifeBuoy, Shield];
 
 const countries = ["Brazil", "India", "Uganda"];
 
@@ -64,13 +59,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 href="/focus-areas"
-                className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] font-body"
+                className="bg-[#B07A50] text-white rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
               >
                 Learn More About Our Projects
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-[#B07A50] text-[#B07A50] rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#B07A50] hover:text-white font-body"
+                className="border-2 border-[#B07A50] text-[#B07A50] rounded px-10 py-4 text-sm font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#B07A50] hover:text-white font-body"
               >
                 Partner With Us
               </Link>
@@ -135,28 +130,34 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {focusAreaPreviews.map((area) => (
-              <div
-                key={area.title}
-                className="bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta p-7"
-              >
-                <area.icon className="w-8 h-8 text-terracotta mb-4" />
-                <h3 className="text-[26px] font-normal text-brown-dark font-display mb-3 leading-[1.25]">
-                  {area.title}
-                </h3>
-                <Link
-                  href="/focus-areas"
-                  className="text-[#8B5E3C] font-normal text-[13px] hover:underline font-body"
+            {FOCUS_AREAS.map((area, i) => {
+              const Icon = focusAreaIcons[i];
+              return (
+                <div
+                  key={area.title}
+                  className="bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta p-7"
                 >
-                  Learn More <span className="font-display italic">&rarr;</span>
-                </Link>
-              </div>
-            ))}
+                  <Icon className="w-8 h-8 text-terracotta mb-4" />
+                  <h3 className="text-[26px] font-normal text-brown-dark font-display mb-2 leading-[1.25]">
+                    {area.title}
+                  </h3>
+                  <p className="text-[#3D2515] text-[14px] font-light font-body leading-[1.6] mb-3">
+                    {area.teaser}
+                  </p>
+                  <Link
+                    href="/focus-areas"
+                    className="group inline-flex items-center gap-1 text-[#8B5E3C] font-normal text-[13px] hover:underline underline-offset-4 font-body"
+                  >
+                    Learn More <span className="font-display italic inline-block transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+                  </Link>
+                </div>
+              );
+            })}
           </div>
           <div className="text-center">
             <Link
               href="/focus-areas"
-              className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] font-body"
+              className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
             >
               See All Focus Areas
             </Link>
@@ -186,7 +187,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/global-outreach"
-              className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] font-body"
+              className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-all duration-200 hover:bg-[#9A6A42] hover:-translate-y-px font-body"
             >
               View Our Global Impact
             </Link>
