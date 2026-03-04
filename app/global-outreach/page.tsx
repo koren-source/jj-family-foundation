@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { COUNTRIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -29,7 +31,25 @@ export default function GlobalOutreachPage() {
               i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             } gap-12 items-center`}
           >
-                        <div className="md:w-1/2">
+            {/* Image column */}
+            <div className="md:w-1/2">
+              {"image" in country && country.image ? (
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-md">
+                  <Image
+                    src={country.image}
+                    alt={(country as { imageAlt?: string; name: string }).imageAlt ?? country.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              ) : (
+                <ImagePlaceholder className="rounded-2xl shadow-sm" />
+              )}
+            </div>
+
+            {/* Text column */}
+            <div className="md:w-1/2">
               <h2 className="text-[44px] font-normal text-brown-dark font-display mb-2">
                 {country.name}
               </h2>

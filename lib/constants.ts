@@ -74,6 +74,8 @@ export const COUNTRIES = [
     description:
       "Through our support of Rising Star Outreach, we contribute to initiatives serving individuals and families living in leprosy colonies. By strengthening education access, community development, and economic empowerment efforts, these programs provide dignity, opportunity, and sustainable pathways forward.",
     link: { label: "Visit Rising Star Outreach", href: "#" },
+    image: "/images/india-rising-star.jpg",
+    imageAlt: "JJ Family Foundation team with children at Rising Star Outreach, India",
   },
   {
     name: "Uganda",
