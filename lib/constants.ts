@@ -67,6 +67,8 @@ export const COUNTRIES = [
     description:
       "In Brazil, we support Mission Guadalupe, a local foundation dedicated to serving families and strengthening communities. Through sponsorship and ongoing support, we help advance initiatives focused on family stability, faith centered development, and long term community growth. We also support a men\u2019s rehabilitation clinic in Brazil, contributing to recovery and restoration programs that rebuild lives and strengthen families for generations.",
     link: { label: "Visit Mission Guadalupe", href: "#" },
+    image: "/images/brazil-mission-guadalupe.jpg",
+    imageAlt: "The Gardner family at Mission Guadalupe, Brazil",
   },
   {
     name: "India",
