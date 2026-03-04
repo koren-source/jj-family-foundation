@@ -5,9 +5,9 @@ export default function ImagePlaceholder({
 }) {
   return (
     <div
-      className={`bg-cream rounded-xl flex items-center justify-center aspect-video ${className}`}
+      className={`bg-cream rounded-lg flex items-center justify-center aspect-video ${className}`}
     >
-      <span className="text-terracotta text-sm font-semibold uppercase tracking-widest font-[family-name:var(--font-lato)]">
+      <span className="text-terracotta text-xs font-medium uppercase tracking-widest font-body">
         Photo Coming Soon
       </span>
     </div>
