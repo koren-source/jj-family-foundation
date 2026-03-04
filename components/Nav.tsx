@@ -39,7 +39,7 @@ export default function Nav() {
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="text-xl font-bold text-brown-dark font-[family-name:var(--font-playfair)]"
+          className="text-lg font-normal text-[#2C1810] font-display no-underline"
         >
           JJ Family Foundation
         </Link>
@@ -55,10 +55,10 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors font-[family-name:var(--font-lato)] ${
+                className={`text-sm font-normal transition-colors font-body ${
                   isActive
-                    ? "text-terracotta border-b-2 border-terracotta pb-1"
-                    : "text-text-dark hover:text-brown-mid"
+                    ? "text-terracotta underline underline-offset-4"
+                    : "text-[#2C1810] hover:text-brown-mid"
                 }`}
               >
                 {link.label}
@@ -67,7 +67,7 @@ export default function Nav() {
           })}
           <Link
             href="/contact"
-            className="bg-terracotta text-white rounded-lg px-6 py-2 text-sm font-semibold transition-colors hover:bg-[#B07D55] font-[family-name:var(--font-lato)]"
+            className="bg-[#B07A50] text-white rounded px-5 py-2.5 text-xs font-medium uppercase tracking-[0.08em] transition-colors hover:bg-[#9A6A42] font-body"
           >
             Partner With Us
           </Link>
@@ -89,7 +89,7 @@ export default function Nav() {
           <div className="flex items-center justify-between px-6 py-4">
             <Link
               href="/"
-              className="text-xl font-bold text-brown-dark font-[family-name:var(--font-playfair)]"
+              className="text-lg font-normal text-[#2C1810] font-display no-underline"
             >
               JJ Family Foundation
             </Link>
@@ -112,7 +112,7 @@ export default function Nav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`text-2xl font-medium min-h-[48px] flex items-center font-[family-name:var(--font-lato)] ${
+                  className={`text-2xl font-normal min-h-[48px] flex items-center font-body ${
                     isActive ? "text-terracotta" : "text-text-dark"
                   }`}
                 >
@@ -123,7 +123,7 @@ export default function Nav() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="bg-terracotta text-white rounded-lg px-8 py-3 text-lg font-semibold transition-colors hover:bg-[#B07D55] font-[family-name:var(--font-lato)]"
+              className="bg-[#B07A50] text-white rounded px-8 py-3 text-xs font-medium uppercase tracking-[0.08em] transition-colors hover:bg-[#9A6A42] font-body"
             >
               Partner With Us
             </Link>

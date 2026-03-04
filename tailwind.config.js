@@ -17,8 +17,8 @@ module.exports = {
         'text-dark':   '#2C1A0E',
       },
       fontFamily: {
-        display: ['var(--font-playfair)', 'serif'],
-        body:    ['var(--font-lato)', 'sans-serif'],
+        display: ['var(--font-display)', 'Georgia', 'serif'],
+        body:    ['var(--font-body)', 'system-ui', 'sans-serif'],
       },
     },
   },

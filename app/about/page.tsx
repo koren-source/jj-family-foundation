@@ -27,17 +27,17 @@ export default function AboutPage() {
       />
 
       {/* Foundation Story */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-center">
-          <div className="md:w-1/2 space-y-6">
-            <p className="text-text-dark text-lg font-[family-name:var(--font-lato)]">
+          <div className="md:w-1/2 max-w-[520px]">
+            <p className="text-[#3D2515] text-base font-light font-body leading-[1.8] mb-[1.4em]">
               JJ Family Foundation was founded by the Gardner family with a
               shared commitment to building generational self sufficiency. Led by
               Jeff and Janeen Gardner and their four daughters, Ellie, Addison,
               Paisley, and Jules, the foundation reflects their belief that
               strong families are the foundation of thriving communities.
             </p>
-            <p className="text-text-dark text-lg font-[family-name:var(--font-lato)]">
+            <p className="text-[#3D2515] text-base font-light font-body leading-[1.8] mb-[1.4em]">
               As a family centered organization, our mission is rooted in
               education, advocacy, and meaningful connection. We believe lasting
               change is achieved by strengthening what already works. By
@@ -45,7 +45,7 @@ export default function AboutPage() {
               investing in sustainable initiatives, we help communities build
               resilience that extends far beyond a single generation.
             </p>
-            <p className="text-text-dark text-lg font-[family-name:var(--font-lato)]">
+            <p className="text-[#3D2515] text-base font-light font-body leading-[1.8]">
               Our work focuses on financial literacy, education access,
               entrepreneurship, family stability, addiction recovery, and
               community leadership development. Through both local and
@@ -61,10 +61,10 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Blockquote */}
-      <section className="bg-cream py-20 md:py-28 px-6">
-        <div className="max-w-3xl mx-auto">
-          <blockquote className="border-l-4 border-terracotta pl-6 py-2">
-            <p className="text-xl text-brown-mid font-[family-name:var(--font-playfair)] italic leading-relaxed">
+      <section className="bg-cream px-6 md:px-12">
+        <div className="max-w-3xl mx-auto text-center">
+          <blockquote>
+            <p className="text-[26px] text-brown-mid font-display italic font-light leading-[1.5]">
               &ldquo;We believe knowledge is the first step toward lasting
               change. Through education, advocacy, and meaningful connection, we
               empower families and communities to become self-sufficient and
@@ -75,9 +75,9 @@ export default function AboutPage() {
       </section>
 
       {/* Service commitment line */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xl text-brown-mid font-[family-name:var(--font-playfair)] italic">
+      <section className="px-6">
+        <div className="max-w-[700px] mx-auto text-center">
+          <p className="text-2xl text-brown-mid font-display italic font-light leading-[1.5]">
             At JJ Family Foundation, service is not simply an initiative. It is a
             family commitment. Together, we seek to create impact that is
             sustainable, measurable, and generational.
@@ -86,22 +86,22 @@ export default function AboutPage() {
       </section>
 
       {/* Gardner Family */}
-      <section className="bg-cream-light py-20 md:py-28 px-6">
+      <section className="bg-cream-light px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <SectionLabel text="THE FAMILY" />
-            <h2 className="text-3xl md:text-4xl font-semibold text-brown-mid font-[family-name:var(--font-playfair)] mt-4">
+            <h2 className="text-brown-mid font-display font-light mt-4">
               The Gardner Family
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {familyMembers.map((member) => (
               <div key={member.name} className="text-center">
-                <ImagePlaceholder className="mb-4 aspect-square" />
-                <h3 className="text-lg font-semibold text-brown-dark font-[family-name:var(--font-playfair)]">
+                <ImagePlaceholder className="mb-4 aspect-[3/4]" />
+                <h3 className="text-lg font-normal text-brown-dark font-display">
                   {member.name}
                 </h3>
-                <p className="text-sm text-brown-mid font-[family-name:var(--font-lato)]">
+                <p className="text-xs font-light text-brown-mid font-body uppercase tracking-[0.1em]">
                   {member.role}
                 </p>
               </div>
@@ -111,12 +111,12 @@ export default function AboutPage() {
       </section>
 
       {/* Values Strip */}
-      <section className="bg-brown-dark py-16 px-6">
+      <section className="bg-brown-dark !py-16 px-6">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-8">
           {["Education", "Advocacy", "Meaningful Connection"].map((value) => (
             <span
               key={value}
-              className="text-cream-light text-lg font-semibold font-[family-name:var(--font-lato)] border border-cream-light/30 rounded-full px-8 py-3"
+              className="text-cream-light text-[13px] font-normal font-body border border-cream-light/30 rounded-full px-8 py-3"
             >
               {value}
             </span>

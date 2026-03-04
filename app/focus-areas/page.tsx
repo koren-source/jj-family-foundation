@@ -22,7 +22,7 @@ export default function FocusAreasPage() {
       {FOCUS_AREAS.map((area, i) => (
         <section
           key={area.number}
-          className={`py-20 md:py-28 px-6 ${
+          className={`px-6 ${
             i % 2 === 0 ? "bg-white" : "bg-cream"
           }`}
         >
@@ -34,12 +34,12 @@ export default function FocusAreasPage() {
             <div className="md:w-1/2">
               <ImagePlaceholder />
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 max-w-[480px]">
               <SectionLabel text={area.number} />
-              <h2 className="text-2xl md:text-3xl font-semibold text-brown-dark font-[family-name:var(--font-playfair)] mt-3 mb-6">
+              <h2 className="text-[44px] md:text-[44px] font-light text-brown-dark font-display mt-3 mb-6">
                 {area.title}
               </h2>
-              <p className="text-text-dark text-lg font-[family-name:var(--font-lato)]">
+              <p className="text-[#3D2515] text-base font-light font-body leading-[1.8]">
                 {area.description}
               </p>
             </div>
@@ -48,9 +48,9 @@ export default function FocusAreasPage() {
       ))}
 
       {/* Closing Quote */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="bg-cream px-6 py-[60px]">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xl text-brown-mid font-[family-name:var(--font-playfair)] italic">
+          <p className="text-[26px] text-brown-mid font-display italic font-light leading-[1.5]">
             By strengthening what already works and connecting people to the
             right resources, we help communities build lasting generational
             change.

@@ -46,7 +46,7 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex items-center justify-center py-16">
-        <p className="text-2xl text-brown-mid font-[family-name:var(--font-playfair)] italic">
+        <p className="text-2xl text-brown-mid font-display italic">
           Thank you! We&apos;ll be in touch soon.
         </p>
       </div>
@@ -56,7 +56,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label htmlFor="name" className="block text-sm font-bold text-text-dark mb-1 font-[family-name:var(--font-lato)]">
+        <label htmlFor="name" className="block text-[13px] font-normal tracking-[0.02em] text-text-dark mb-1 font-body">
           Full Name *
         </label>
         <input
@@ -64,12 +64,12 @@ export default function ContactForm() {
           id="name"
           name="name"
           disabled={status === "loading"}
-          className="w-full rounded-lg border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
+          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
         />
         {errors.name && <p className="text-terracotta text-sm mt-1">{errors.name}</p>}
       </div>
       <div>
-        <label htmlFor="email" className="block text-sm font-bold text-text-dark mb-1 font-[family-name:var(--font-lato)]">
+        <label htmlFor="email" className="block text-[13px] font-normal tracking-[0.02em] text-text-dark mb-1 font-body">
           Email Address *
         </label>
         <input
@@ -77,12 +77,12 @@ export default function ContactForm() {
           id="email"
           name="email"
           disabled={status === "loading"}
-          className="w-full rounded-lg border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
+          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
         />
         {errors.email && <p className="text-terracotta text-sm mt-1">{errors.email}</p>}
       </div>
       <div>
-        <label htmlFor="organization" className="block text-sm font-bold text-text-dark mb-1 font-[family-name:var(--font-lato)]">
+        <label htmlFor="organization" className="block text-[13px] font-normal tracking-[0.02em] text-text-dark mb-1 font-body">
           Organization
         </label>
         <input
@@ -90,11 +90,11 @@ export default function ContactForm() {
           id="organization"
           name="organization"
           disabled={status === "loading"}
-          className="w-full rounded-lg border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
+          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
         />
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-bold text-text-dark mb-1 font-[family-name:var(--font-lato)]">
+        <label htmlFor="message" className="block text-[13px] font-normal tracking-[0.02em] text-text-dark mb-1 font-body">
           How would you like to partner?
         </label>
         <textarea
@@ -102,7 +102,7 @@ export default function ContactForm() {
           name="message"
           rows={4}
           disabled={status === "loading"}
-          className="w-full rounded-lg border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50"
+          className="w-full rounded-md border border-divider bg-white px-4 py-3 text-text-dark focus:outline-none focus:ring-2 focus:ring-terracotta disabled:opacity-50 min-h-[120px]"
         />
       </div>
       {status === "error" && (
@@ -111,7 +111,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full bg-terracotta text-white rounded-lg px-8 py-3 font-semibold transition-colors hover:bg-[#B07D55] disabled:opacity-50 font-[family-name:var(--font-lato)]"
+        className="w-full sm:w-auto bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] disabled:opacity-50 font-body"
       >
         {status === "loading" ? (
           <span className="flex items-center justify-center gap-2">

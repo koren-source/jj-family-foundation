@@ -45,16 +45,16 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-cream-light py-20 md:py-28 px-6">
+      <section className="bg-cream-light px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-3/5 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-bold text-brown-dark font-[family-name:var(--font-playfair)] mb-4">
+            <h1 className="text-brown-dark font-display font-light mb-4">
               Building Generational Self Sufficiency.
             </h1>
-            <p className="text-xl md:text-2xl text-brown-mid font-[family-name:var(--font-playfair)] italic mb-6">
+            <p className="text-[22px] text-[#8B5E3C] font-display italic font-light mb-6">
               Stronger families create stronger futures.
             </p>
-            <p className="text-text-dark text-lg max-w-2xl mb-8 font-[family-name:var(--font-lato)]">
+            <p className="text-[#3D2515] text-base font-light max-w-2xl mb-8 font-body leading-[1.8]">
               Through education, advocacy, and meaningful community connection,
               we help families build stability, resilience, and opportunity that
               extends beyond a single generation. We do not reinvent solutions.
@@ -64,13 +64,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 href="/focus-areas"
-                className="bg-terracotta text-white rounded-lg px-8 py-3 font-semibold transition-colors hover:bg-[#B07D55] font-[family-name:var(--font-lato)]"
+                className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] font-body"
               >
                 Learn More About Our Projects
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-terracotta text-terracotta rounded-lg px-8 py-3 font-semibold transition-colors hover:bg-terracotta hover:text-white font-[family-name:var(--font-lato)]"
+                className="border-2 border-[#B07A50] text-[#B07A50] rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#B07A50] hover:text-white font-body"
               >
                 Partner With Us
               </Link>
@@ -83,14 +83,14 @@ export default function Home() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20 md:py-28 px-6">
+      <section className="px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <SectionLabel text="OUR APPROACH" />
-            <h2 className="text-3xl md:text-4xl font-semibold text-brown-mid font-[family-name:var(--font-playfair)] mt-4 mb-6">
+            <h2 className="text-brown-mid font-display font-light mt-4 mb-6">
               Lasting Change Starts With Strengthening What Works
             </h2>
-            <p className="text-text-dark text-lg max-w-3xl mx-auto font-[family-name:var(--font-lato)]">
+            <p className="text-[#3D2515] text-base font-light max-w-[620px] mx-auto font-body leading-[1.8]">
               Lasting change does not come from starting over. It comes from
               strengthening what already works. At JJ Family Foundation, we focus
               on education, connection, and collaboration to help families and
@@ -102,49 +102,53 @@ export default function Home() {
             {approachCards.map((card) => (
               <div
                 key={card.title}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta p-6"
+                className="bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta p-7"
               >
                 <card.icon className="w-8 h-8 text-terracotta mb-4" />
-                <h3 className="text-xl font-semibold text-brown-dark font-[family-name:var(--font-playfair)] mb-3">
+                <h3 className="text-[26px] font-normal text-brown-dark font-display mb-3">
                   {card.title}
                 </h3>
-                <p className="text-text-dark font-[family-name:var(--font-lato)]">
+                <p className="text-[#3D2515] text-[15px] font-light font-body leading-[1.75]">
                   {card.body}
                 </p>
               </div>
             ))}
           </div>
-          <p className="text-center text-xl text-brown-mid font-[family-name:var(--font-playfair)] italic max-w-xl mx-auto">
-            When knowledge and connection come together, generational change
-            becomes possible.
-          </p>
+
+          {/* Pull Quote */}
+          <div className="py-[60px] border-t border-b border-[#D4B896]">
+            <p className="text-center text-[26px] text-brown-mid font-display italic font-light max-w-xl mx-auto leading-[1.5]">
+              When knowledge and connection come together, generational change
+              becomes possible.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Focus Areas Preview */}
-      <section className="bg-cream py-20 md:py-28 px-6">
+      <section className="bg-cream px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <SectionLabel text="OUR FOCUS AREAS" />
-            <h2 className="text-3xl md:text-4xl font-semibold text-brown-mid font-[family-name:var(--font-playfair)] mt-4">
+            <h2 className="text-brown-mid font-display font-light mt-4">
               Where We Invest Our Energy
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {focusAreaPreviews.map((area) => (
               <div
                 key={area.title}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta p-6"
+                className="bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow border-t-4 border-terracotta p-7"
               >
                 <area.icon className="w-8 h-8 text-terracotta mb-4" />
-                <h3 className="text-lg font-semibold text-brown-dark font-[family-name:var(--font-playfair)] mb-3">
+                <h3 className="text-[26px] font-normal text-brown-dark font-display mb-3 leading-[1.25]">
                   {area.title}
                 </h3>
                 <Link
                   href="/focus-areas"
-                  className="text-terracotta font-semibold text-sm hover:underline font-[family-name:var(--font-lato)]"
+                  className="text-[#8B5E3C] font-normal text-[13px] hover:underline font-body"
                 >
-                  Learn More &rarr;
+                  Learn More <span className="font-display italic">&rarr;</span>
                 </Link>
               </div>
             ))}
@@ -152,7 +156,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/focus-areas"
-              className="bg-terracotta text-white rounded-lg px-8 py-3 font-semibold transition-colors hover:bg-[#B07D55] font-[family-name:var(--font-lato)]"
+              className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] font-body"
             >
               See All Focus Areas
             </Link>
@@ -161,11 +165,11 @@ export default function Home() {
       </section>
 
       {/* Global Outreach Teaser */}
-      <section className="bg-cream-light py-20 md:py-28 px-6">
+      <section className="bg-cream-light px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <SectionLabel text="GLOBAL OUTREACH" />
-            <h2 className="text-3xl md:text-4xl font-semibold text-brown-mid font-[family-name:var(--font-playfair)] mt-4">
+            <h2 className="text-brown-mid font-display font-light mt-4">
               Building Self Sufficiency Across Borders
             </h2>
           </div>
@@ -173,7 +177,7 @@ export default function Home() {
             {countries.map((country) => (
               <div key={country} className="text-center">
                 <ImagePlaceholder className="mb-4" />
-                <h3 className="text-xl font-semibold text-brown-dark font-[family-name:var(--font-playfair)]">
+                <h3 className="text-2xl font-normal text-brown-dark font-display">
                   {country}
                 </h3>
               </div>
@@ -182,7 +186,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/global-outreach"
-              className="bg-terracotta text-white rounded-lg px-8 py-3 font-semibold transition-colors hover:bg-[#B07D55] font-[family-name:var(--font-lato)]"
+              className="bg-[#B07A50] text-white rounded px-8 py-3.5 text-xs font-medium uppercase tracking-[0.1em] transition-colors hover:bg-[#9A6A42] font-body"
             >
               View Our Global Impact
             </Link>

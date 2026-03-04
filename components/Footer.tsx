@@ -15,10 +15,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           {/* Logo + tagline */}
           <div>
-            <p className="text-xl font-bold font-[family-name:var(--font-playfair)] mb-2">
+            <p className="text-lg font-normal font-display mb-2 text-white">
               JJ Family Foundation
             </p>
-            <p className="text-cream-light/70 text-sm font-[family-name:var(--font-lato)]">
+            <p className="text-[13px] font-light font-body text-white/65">
               Building Generational Self Sufficiency.
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-cream-light/70 hover:text-cream-light transition-colors font-[family-name:var(--font-lato)]"
+                className="text-[13px] font-normal text-white/80 hover:text-white transition-colors font-body"
               >
                 {link.label}
               </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-divider mt-12 pt-8">
-          <p className="text-sm text-cream-light/50 text-center font-[family-name:var(--font-lato)]">
+          <p className="text-[13px] text-white/50 text-center font-body font-normal">
             &copy; 2026 JJ Family Foundation. All rights reserved.
           </p>
         </div>
